@@ -59,6 +59,7 @@ const Illustrations = () => {
               className="rounded-lg w-full h-auto max-w-[440px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
               onClick={() => handleImageClick(idx)}
               style={{ objectFit: "contain" }}
+              onContextMenu={e => e.preventDefault()}
             />
           </div>
         ))}
@@ -83,6 +84,7 @@ const Illustrations = () => {
                         quality={40}
                         className="rounded-lg object-contain max-h-screen"
                         style={{ objectFit: "contain" }}
+                        onContextMenu={e => e.preventDefault()}
                       />
                     </CarouselItem>
                   ))}

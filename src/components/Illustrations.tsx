@@ -5,20 +5,20 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
-    { src: "/pokemon_anya.png", alt: "pokemon_anya", wide: true },
-    { src: "/pokemon_picnic.png", alt: "pokemon_picnic", wide: true },
+    { src: "/pokemon_anya.PNG", alt: "pokemon_anya", wide: true },
+    { src: "/pokemon_picnic.PNG", alt: "pokemon_picnic", wide: true },
     { src: "/bounsweet.png", alt: "bounsweet", wide: false },
-    { src: "/makima.png", alt: "makima", wide: false },
+    { src: "/makima.PNG", alt: "makima", wide: false },
     { src: "/hina.png", alt: "hina", wide: false },
     { src: "/saba.png", alt: "saba", wide: false },
-    { src: "/maomao.png", alt: "maomao", wide: false },
-    { src: "/wooper.png", alt: "wooper", wide: false },
+    { src: "/maomao.PNG", alt: "maomao", wide: false },
+    { src: "/wooper.PNG", alt: "wooper", wide: false },
     { src: "/swablu.png", alt: "swablu", wide: false },
     { src: "/piplup.png", alt: "piplup", wide: false },
     { src: "/gojo.png", alt: "gojo", wide: false },
-    { src: "/sylveon_anya.png", alt: "sylveon_anya", wide: false },
+    { src: "/sylveon_anya.PNG", alt: "sylveon_anya", wide: false },
     { src: "/animusic.png", alt: "animusic", wide: true },
-    { src: "/bocchi_the_idol.png", alt: "bocchi_the_idol", wide: false }
+    { src: "/bocchi_the_idol.PNG", alt: "bocchi_the_idol", wide: false }
   ];
 
   const [carouselOpen, setCarouselOpen] = useState(false);

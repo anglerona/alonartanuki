@@ -77,8 +77,6 @@ const Stickers = () => {
           </div>
         </div>
       ))}
-
-      {/* Carousel Modal using shadcn/ui */}
       {carouselOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" onClick={() => setCarouselOpen(false)}>
           <div className="absolute inset-0 flex flex-col items-center justify-center" onClick={e => e.stopPropagation()}>
@@ -96,7 +94,6 @@ const Stickers = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                {/* Custom navigation buttons */}
                 <button
                   className="absolute hover:cursor-pointer left-4 top-1/2 -translate-y-1/2 z-50 flex items-center justify-center"
                   onClick={handlePrev}

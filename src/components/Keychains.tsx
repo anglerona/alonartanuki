@@ -2,6 +2,29 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import aqua from "../public/keychains/aqua.png";
+import bocchi from "../public/keychains/bocchi.png";
+import Chiori from "../public/keychains/Chiori.png";
+import darkness from "../public/keychains/darkness.png";
+import Freminet from "../public/keychains/Freminet.png";
+import Furina from "../public/keychains/Furina.png";
+import Hitagi from "../public/keychains/Hitagi.png";
+import Kaji from "../public/keychains/Kaji.png";
+import kazuma from "../public/keychains/kazuma.png";
+import Lynette from "../public/keychains/Lynette.png";
+import Lyney from "../public/keychains/Lyney.png";
+import Mayoi from "../public/keychains/Mayoi.png";
+import megumin from "../public/keychains/megumin.png";
+import Navia from "../public/keychains/Navia.png";
+import Ononoki from "../public/keychains/Ononoki.png";
+import Sakura from "../public/keychains/Sakura.png";
+import Shinobu from "../public/keychains/Shinobu.png";
+import Suo from "../public/keychains/Suo.png";
+import Togame from "../public/keychains/Togame.png";
+import Tsubaki from "../public/keychains/Tsubaki.png";
+import Tsubasa from "../public/keychains/Tsubasa.png";
+import Tsukihi from "../public/keychains/Tsukihi.png";
+import Umemiya from "../public/keychains/Umemiya.png";
 
 const keychainGroups = [
   {
@@ -114,14 +137,14 @@ const Keychains = () => {
               <div className="relative h-screen w-full">
                 <CarouselContent className="h-screen">
                   {carouselImages.map((img) => (
-                    <CarouselItem key={img} className="flex flex-col items-center justify-center w-full h-screen">
+                    <CarouselItem key={img} className="relative flex flex-col items-center justify-center w-full h-screen">
                       <Image
                         src={`/${img}`}
                         alt={img.replace(/\.[^/.]+$/, "")}
                         fill
                         quality={40}
                         placeholder="blur"
-                        className="rounded-lg w-full h-full object-contain max-h-screen"
+                        className="rounded-lg object-contain max-h-screen"
                         style={{ objectFit: "contain" }}
                       />
                     </CarouselItem>

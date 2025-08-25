@@ -2,6 +2,25 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Ayaka from "../public/stickers/Ayaka.png";
+import Dysfunctional from "../public/stickers/Dysfunctional.png";
+import Furina from "../public/stickers/Furina.png";
+import Glitch from "../public/stickers/Glitch.png";
+import Glock from "../public/stickers/Glock.png";
+import Gorou from "../public/stickers/Gorou.png";
+import Kirara from "../public/stickers/Kirara.png";
+import Kokomi from "../public/stickers/Kokomi.png";
+import Layla from "../public/stickers/Layla.png";
+import Lynette from "../public/stickers/Lynette.png";
+import Lyney from "../public/stickers/Lyney.png";
+import Mango from "../public/stickers/Mango.png";
+import Nahida from "../public/stickers/Nahida.png";
+import Nilou from "../public/stickers/Nilou.png";
+import Noelle from "../public/stickers/Noelle.png";
+import Original from "../public/stickers/Original.png";
+import Sayu from "../public/stickers/Sayu.png";
+import Yaemiko from "../public/stickers/Yaemiko.png";
+import Yoimiya from "../public/stickers/Yoimiya.png";
 
 const stickerGroups = [
   {
@@ -94,14 +113,14 @@ const Stickers = () => {
               <div className="relative h-screen w-full">
                 <CarouselContent className="h-screen">
                   {carouselImages.map((img) => (
-                    <CarouselItem key={img} className="flex flex-col items-center justify-center w-full h-screen">
+                    <CarouselItem key={img} className="relative flex flex-col items-center justify-center w-full h-screen">
                       <Image
                         src={`/${img}`}
                         alt={img.replace(/\.[^/.]+$/, "")}
                         fill
                         quality={40}
                         placeholder="blur"
-                        className="rounded-lg w-full h-full object-contain max-h-screen"
+                        className="rounded-lg object-contain max-h-screen"
                         style={{ objectFit: "contain" }}
                       />
                     </CarouselItem>

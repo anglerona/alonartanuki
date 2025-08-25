@@ -5,20 +5,20 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
-    { src: "pokemon_anya.PNG", wide: true },
-    { src: "pokemon_picnic.PNG", wide: true },
-    { src: "bounsweet.png", wide: false },
-    { src: "makima.PNG", wide: false },
-    { src: "hina.png", wide: false },
-    { src: "saba.png", wide: false },
-    { src: "maomao.PNG", wide: false },
-    { src: "wooper.PNG", wide: false },
-    { src: "swablu.png", wide: false },
-    { src: "piplup.png", wide: false },
-    { src: "gojo.png", wide: false },
-    { src: "sylveon_anya.PNG", wide: false },
-    { src: "animusic.png", wide: true },
-    { src: "bocchi_the_idol.PNG", wide: false }
+    { src: "/pokemon_anya.png", alt: "pokemon_anya", wide: true },
+    { src: "/pokemon_picnic.png", alt: "pokemon_picnic", wide: true },
+    { src: "/bounsweet.png", alt: "bounsweet", wide: false },
+    { src: "/makima.png", alt: "makima", wide: false },
+    { src: "/hina.png", alt: "hina", wide: false },
+    { src: "/saba.png", alt: "saba", wide: false },
+    { src: "/maomao.png", alt: "maomao", wide: false },
+    { src: "/wooper.png", alt: "wooper", wide: false },
+    { src: "/swablu.png", alt: "swablu", wide: false },
+    { src: "/piplup.png", alt: "piplup", wide: false },
+    { src: "/gojo.png", alt: "gojo", wide: false },
+    { src: "/sylveon_anya.png", alt: "sylveon_anya", wide: false },
+    { src: "/animusic.png", alt: "animusic", wide: true },
+    { src: "/bocchi_the_idol.png", alt: "bocchi_the_idol", wide: false }
   ];
 
   const [carouselOpen, setCarouselOpen] = useState(false);
@@ -47,16 +47,15 @@ const Illustrations = () => {
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
         {images.map((img, idx) => (
           <div
-            key={img.src}
+            key={img.alt}
             className={`flex flex-col items-center ${img.wide ? "md:col-span-2 lg:col-span-2" : ""}`}
           >
             <Image
-              src={`/${img.src}`}
-              alt={img.src.replace(/\.[^/.]+$/, "")}
+              src={img.src}
+              alt={img.alt}
               width={440}
               height={img.wide ? 300 : 220}
               quality={40}
-              placeholder="blur"
               className="rounded-lg w-full h-auto max-w-[440px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
               onClick={() => handleImageClick(idx)}
               style={{ objectFit: "contain" }}
@@ -76,14 +75,13 @@ const Illustrations = () => {
               <div className="relative h-screen w-full">
                 <CarouselContent className="h-screen">
                   {images.map((img) => (
-                    <CarouselItem key={img.src} className="flex flex-col items-center justify-center w-full h-screen">
+                    <CarouselItem key={img.alt} className="relative flex flex-col items-center justify-center w-full h-screen">
                       <Image
-                        src={`/${img.src}`}
-                        alt={img.src.replace(/\.[^/.]+$/, "")}
+                        src={img.src}
+                        alt={img.alt}
                         fill
                         quality={40}
-                        placeholder="blur"
-                        className="rounded-lg w-full h-full object-contain max-h-screen"
+                        className="rounded-lg object-contain max-h-screen"
                         style={{ objectFit: "contain" }}
                       />
                     </CarouselItem>

@@ -7,7 +7,7 @@ const Illustrations = () => {
     { src: "pokemon_anya.PNG", wide: true },
     { src: "pokemon_picnic.PNG", wide: true },
     { src: "bounsweet.png", wide: false },
-    { src: "makima.png", wide: false },
+    { src: "makima.PNG", wide: false },
     { src: "hina.png", wide: false },
     { src: "saba.png", wide: false },
     { src: "maomao.PNG", wide: false },

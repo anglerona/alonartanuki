@@ -20,43 +20,43 @@ export function DraggableCards() {
     },
     {
       title: "Bocchi and Ruby",
-      image: "/bocchi_the_idol.png",
+      image: "/bocchi_the_idol.PNG",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
       orientation: "vertical"
     },
     {
       title: "Summer at the beach with wooper",
-      image: "/wooper.png",
+      image: "/wooper.PNG",
       className: "absolute top-32 left-[55%] rotate-[10deg]",
       orientation: "vertical"
     },
     {
       title: "Makima",
-      image: "/makima.png",
+      image: "/makima.PNG",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
       orientation: "vertical"
     },
     {
       title: "Maomao",
-      image: "/maomao.png",
+      image: "/maomao.PNG",
       className: "absolute top-24 left-[45%] rotate-[-7deg]",
       orientation: "vertical"
     },
     {
       title: "Sylveon Anya",
-      image: "/sylveon_anya.png",
+      image: "/sylveon_anya.PNG",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       orientation: "vertical"
     },
     {
       title: "Pokemon picnic",
-      image: "/pokemon_picnic.png",
+      image: "/pokemon_picnic.PNG",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       orientation: "horizontal"
     },
      {
       title: "Pokemon Anya",
-      image: "/pokemon_anya.png",
+      image: "/pokemon_anya.PNG",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       orientation: "horizontal"
     },

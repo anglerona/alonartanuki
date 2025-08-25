@@ -115,7 +115,6 @@ const Keychains = () => {
                   width={220}
                   height={220}
                   quality={40}
-                  placeholder="blur"
                   className="rounded-lg w-full h-auto max-w-[220px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                   onClick={() => handleImageClick(group.images, idx)}
                   style={{ objectFit: "contain" }}
@@ -143,7 +142,6 @@ const Keychains = () => {
                         alt={img.replace(/\.[^/.]+$/, "")}
                         fill
                         quality={40}
-                        placeholder="blur"
                         className="rounded-lg object-contain max-h-screen"
                         style={{ objectFit: "contain" }}
                       />

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -49,11 +50,16 @@ const Illustrations = () => {
             key={img.src}
             className={`flex flex-col items-center ${img.wide ? "md:col-span-2 lg:col-span-2" : ""}`}
           >
-            <img
+            <Image
               src={`/${img.src}`}
               alt={img.src.replace(/\.[^/.]+$/, "")}
+              width={440}
+              height={img.wide ? 300 : 220}
+              quality={40}
+              placeholder="blur"
               className="rounded-lg w-full h-auto max-w-[440px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
               onClick={() => handleImageClick(idx)}
+              style={{ objectFit: "contain" }}
             />
           </div>
         ))}
@@ -71,8 +77,15 @@ const Illustrations = () => {
                 <CarouselContent className="h-screen">
                   {images.map((img) => (
                     <CarouselItem key={img.src} className="flex flex-col items-center justify-center w-full h-screen">
-                      <img src={`/${img.src}`} alt={img.src.replace(/\.[^/.]+$/, "")}
-                        className="rounded-lg w-full h-full object-contain max-h-screen" />
+                      <Image
+                        src={`/${img.src}`}
+                        alt={img.src.replace(/\.[^/.]+$/, "")}
+                        fill
+                        quality={40}
+                        placeholder="blur"
+                        className="rounded-lg w-full h-full object-contain max-h-screen"
+                        style={{ objectFit: "contain" }}
+                      />
                     </CarouselItem>
                   ))}
                 </CarouselContent>

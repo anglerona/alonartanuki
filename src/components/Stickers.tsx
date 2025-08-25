@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -66,11 +67,16 @@ const Stickers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
             {group.images.map((img, idx) => (
               <div key={img} className="flex flex-col items-center">
-                <img
+                <Image
                   src={`/${img}`}
                   alt={img.replace(/\.[^/.]+$/, "")}
+                  width={220}
+                  height={220}
+                  quality={40}
+                  placeholder="blur"
                   className="rounded-lg w-full h-auto max-w-[220px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                   onClick={() => handleImageClick(group.images, idx)}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
             ))}
@@ -89,8 +95,15 @@ const Stickers = () => {
                 <CarouselContent className="h-screen">
                   {carouselImages.map((img) => (
                     <CarouselItem key={img} className="flex flex-col items-center justify-center w-full h-screen">
-                      <img src={`/${img}`} alt={img.replace(/\.[^/.]+$/, "")}
-                        className="rounded-lg w-full h-full object-contain max-h-screen" />
+                      <Image
+                        src={`/${img}`}
+                        alt={img.replace(/\.[^/.]+$/, "")}
+                        fill
+                        quality={40}
+                        placeholder="blur"
+                        className="rounded-lg w-full h-full object-contain max-h-screen"
+                        style={{ objectFit: "contain" }}
+                      />
                     </CarouselItem>
                   ))}
                 </CarouselContent>

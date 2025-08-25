@@ -19,7 +19,7 @@ const stickerGroups = [
         "stickers/Gorou.png",
         "stickers/Kirara.png",
         "stickers/Sayu.png",
-        "stickers/YaeMiko.png",
+        "stickers/Yaemiko.png",
     ]
   },
   {

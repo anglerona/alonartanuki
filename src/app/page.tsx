@@ -19,12 +19,17 @@ export default function Home() {
       />
       <h1 className="mt-8 font-bold text-3xl">Welcome! I'm alonartanuki</h1>
       <p>You can view my portfolio and socials with the buttons or see a snapshot of what I've worked on below.</p>
-      <Button
+    
+        <Link href="/portfolio">
+        <Button
         variant="default"
         size="lg"
       >
-        <Link href="/portfolio">View Portfolio</Link>
-      </Button>
+        View Portfolio
+
+        </Button>
+        </Link>
+    
 
       <div className="flex flex-col md:flex-row gap-4">
         <Button

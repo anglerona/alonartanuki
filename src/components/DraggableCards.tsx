@@ -3,6 +3,7 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
+import Image from "next/image";
 
 export function DraggableCards() {
   const items = [
@@ -67,17 +68,30 @@ export function DraggableCards() {
         If you like what you see, check out my portfolio!
       </p>
       {items.map((item) => (
-        <DraggableCardBody
-          key={item.title}
-          className={`${item.className} ${item.orientation === "horizontal" ? "w-[540px] h-[220px]" : "w-[320px] h-[340px]"}`}
-        >
-          <img
-            src={item.image}
-            alt={item.title}
-            className={`pointer-events-none relative z-10 object-cover w-full h-full`}
-            onContextMenu={e => e.preventDefault()}
-          />
-        </DraggableCardBody>
+          <DraggableCardBody
+            key={item.title}
+            className={`${item.className} ${item.orientation === "horizontal" ? "w-[540px] h-[220px]" : "w-[320px] h-[340px]"}`}
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 340px) 100vw, 340px"
+                className="object-cover w-full h-full select-none z-10"
+                draggable={false}
+                onContextMenu={e => e.preventDefault()}
+              />
+              <div
+                className="absolute inset-0 z-20 w-full h-full bg-transparent"
+                style={{ pointerEvents: "auto", touchAction: "none" }}
+                onContextMenu={e => e.preventDefault()}
+              />
+            </div>
+            <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+              {item.title}
+            </h3>
+          </DraggableCardBody>
       ))}
     </DraggableCardContainer>
   );

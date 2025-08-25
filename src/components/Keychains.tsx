@@ -109,17 +109,20 @@ const Keychains = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
             {group.images.map((img, idx) => (
               <div key={img} className="flex flex-col items-center">
-                <Image
-                  src={`/${img}`}
-                  alt={img.replace(/\.[^/.]+$/, "")}
-                  width={220}
-                  height={220}
-                  quality={40}
-                  className="rounded-lg w-full h-auto max-w-[220px] shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
-                  onClick={() => handleImageClick(group.images, idx)}
-                  style={{ objectFit: "contain" }}
-                  onContextMenu={e => e.preventDefault()}
-                />
+                <div className="relative w-full h-auto max-w-[220px]">
+                  <Image
+                    src={`/${img}`}
+                    alt={img.replace(/\.[^/.]+$/, "")}
+                    width={220}
+                    height={220}
+                    quality={40}
+                    className="rounded-lg w-full h-auto shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
+                    onClick={() => handleImageClick(group.images, idx)}
+                    style={{ objectFit: "contain" }}
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
+                  <div className="absolute inset-0 w-full h-full bg-transparent z-20" style={{ pointerEvents: "none", touchAction: "none" }} onContextMenu={(e) => e.preventDefault()} />
+                </div>
               </div>
             ))}
           </div>
@@ -138,15 +141,18 @@ const Keychains = () => {
                 <CarouselContent className="h-screen">
                   {carouselImages.map((img) => (
                     <CarouselItem key={img} className="relative flex flex-col items-center justify-center w-full h-screen">
-                      <Image
-                        src={`/${img}`}
-                        alt={img.replace(/\.[^/.]+$/, "")}
-                        fill
-                        quality={40}
-                        className="rounded-lg object-contain max-h-screen"
-                        style={{ objectFit: "contain" }}
-                        onContextMenu={e => e.preventDefault()}
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={`/${img}`}
+                          alt={img.replace(/\.[^/.]+$/, "")}
+                          fill
+                          quality={40}
+                          className="rounded-lg object-contain max-h-screen"
+                          style={{ objectFit: "contain" }}
+                          onContextMenu={(e) => e.preventDefault()}
+                        />
+                        <div className="absolute inset-0 w-full h-full bg-transparent z-20" style={{ pointerEvents: "none", touchAction: "none" }} onContextMenu={(e) => e.preventDefault()} />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>

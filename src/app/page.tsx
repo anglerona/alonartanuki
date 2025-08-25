@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-center gap-8 flex flex-col items-center justify-center bg-[#FDF6EC] text-[#4B2E19] mt-12">
+    <div className="min-h-screen text-center gap-4 md:gap-8 flex px-4 flex-col items-center justify-center bg-[#FDF6EC] text-[#4B2E19] mt-12">
       <Image
         src="/profile.png"
         alt="Profile"
@@ -17,7 +17,7 @@ export default function Home() {
         className="rounded-full shadow-lg object-cover"
         priority
       />
-      <h1 className="mt-8 font-bold text-3xl">Welcome! I'm alonartanuki</h1>
+      <h1 className="mt-8 font-bold text-3xl">Hi, I'm alonartanuki!</h1>
       <p>You can view my portfolio and socials with the buttons or see a snapshot of what I've worked on below.</p>
     
         <Link href="/portfolio">

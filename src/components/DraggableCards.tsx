@@ -77,9 +77,6 @@ export function DraggableCards() {
             className={`pointer-events-none relative z-10 object-cover w-full h-full`}
             onContextMenu={e => e.preventDefault()}
           />
-          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-            {item.title}
-          </h3>
         </DraggableCardBody>
       ))}
     </DraggableCardContainer>

@@ -14,12 +14,6 @@ export function DraggableCards() {
       orientation: "vertical"
     },
     {
-      title: "Miss Hina",
-      image: "/hina.png",
-      className: "absolute top-40 left-[25%] rotate-[-7deg]",
-      orientation: "vertical"
-    },
-    {
       title: "Bocchi and Ruby",
       image: "/bocchi_the_idol.PNG",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
@@ -38,9 +32,9 @@ export function DraggableCards() {
       orientation: "vertical"
     },
     {
-      title: "Maomao",
-      image: "/maomao.PNG",
-      className: "absolute top-24 left-[45%] rotate-[-7deg]",
+      title: "Maomao x pokemon",
+      image: "/grass_maomao.PNG",
+      className: "absolute top-40 left-[25%] rotate-[-7deg]",
       orientation: "vertical"
     },
     {
@@ -88,9 +82,6 @@ export function DraggableCards() {
                 onContextMenu={e => e.preventDefault()}
               />
             </div>
-            <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
-              {item.title}
-            </h3>
           </DraggableCardBody>
       ))}
     </DraggableCardContainer>

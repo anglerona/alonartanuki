@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
+    { src: "/grass_maomao.PNG", alt: "grass_maomao", wide: false },
     { src: "/pokemon_anya.PNG", alt: "pokemon_anya", wide: true },
     { src: "/pokemon_picnic.PNG", alt: "pokemon_picnic", wide: true },
     { src: "/bounsweet.png", alt: "bounsweet", wide: false },

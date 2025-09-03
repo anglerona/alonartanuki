@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
+    { src: "/baking.png", alt: "baking", wide: true },
+    { src: "/sleep.png", alt: "sleep", wide: false },
     { src: "/grass_maomao.PNG", alt: "grass_maomao", wide: false },
     { src: "/pokemon_anya.PNG", alt: "pokemon_anya", wide: true },
     { src: "/pokemon_picnic.PNG", alt: "pokemon_picnic", wide: true },
@@ -49,14 +51,14 @@ const Illustrations = () => {
         {images.map((img, idx) => (
           <div
             key={img.alt}
-            className={`flex flex-col items-center ${img.wide ? "md:col-span-2 lg:col-span-2" : ""}`}
+            className={`flex flex-col items-center ${img.wide ? "md:col-span-2" : ""}`}
           >
-            <div className="relative w-full h-auto max-w-[440px]">
+            <div className="relative w-full h-full ">
               <Image
                 src={img.src}
                 alt={img.alt}
-                width={440}
-                height={img.wide ? 300 : 220}
+                width={img.wide ? 440 : 220}
+                height={300}
                 quality={40}
                 className="rounded-lg w-full h-auto shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                 onClick={() => handleImageClick(idx)}

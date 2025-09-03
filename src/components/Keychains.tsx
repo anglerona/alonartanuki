@@ -109,7 +109,7 @@ const Keychains = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
             {group.images.map((img, idx) => (
               <div key={img} className="flex flex-col items-center">
-                <div className="relative w-full h-auto max-w-[220px]">
+                <div className="relative w-full h-auto">
                   <Image
                     src={`/${img}`}
                     alt={img.replace(/\.[^/.]+$/, "")}

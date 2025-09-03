@@ -53,12 +53,11 @@ export default function Home() {
         <Button
           variant="ghost"
           size="lg"
-          onClick={() => window.open("https://www.etsy.com/ca/shop/alonartanuki", "_blank")}
+          onClick={() => window.open("https://alonartanuki.etsy.com", "_blank")}
           className="flex items-center gap-2"
-          disabled
         >
           <Store className="w-5 h-5" />
-          Etsy (Coming Soon)
+          Etsy
         </Button>
       </div>
       <DraggableCards />

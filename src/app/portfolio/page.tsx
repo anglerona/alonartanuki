@@ -12,9 +12,9 @@ const PortfolioPage = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center bg-[#FDF6EC] text-[#4B2E19] p-4">
       <h1 className="text-3xl font-bold mb-8">My Portfolio</h1>
-      <div className="w-full max-w-2xl flex justify-center items-center">
+      <div className="w-full max-w-4xl flex justify-center items-center">
         <Tabs defaultValue="illustrations">
-          <TabsList className="mb-4 flex justify-center w-full min-w-[300px]">
+          <TabsList className="mb-4 flex justify-center w-full">
             <TabsTrigger value="illustrations">Illustrations</TabsTrigger>
             <TabsTrigger value="keychain">Keychain Art</TabsTrigger>
             <TabsTrigger value="sticker">Sticker Art</TabsTrigger>

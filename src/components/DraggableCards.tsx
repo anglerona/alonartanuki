@@ -21,7 +21,7 @@ export function DraggableCards() {
     },
     {
       title: "Summer at the beach with wooper",
-      image: "/wooper.PNG",
+      image: "/wooper.png",
       className: "absolute top-32 left-[55%] rotate-[10deg]",
       orientation: "vertical"
     },
@@ -39,7 +39,7 @@ export function DraggableCards() {
     },
     {
       title: "Sylveon Anya",
-      image: "/sylveon_anya.PNG",
+      image: "/sylveon_anya.png",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       orientation: "vertical"
     },

@@ -15,12 +15,12 @@ const Illustrations = () => {
     { src: "/hina.png", alt: "hina", wide: false },
     { src: "/saba.png", alt: "saba", wide: false },
     { src: "/maomao.PNG", alt: "maomao", wide: false },
-    { src: "/wooper.png", alt: "wooper", wide: false },
+    { src: "/wooper.PNG", alt: "wooper", wide: false },
     { src: "/swablu.png", alt: "swablu", wide: false },
     { src: "/piplup.png", alt: "piplup", wide: false },
     { src: "/tsukihi.png", alt: "tsukihi", wide: false },
     { src: "/gojo.png", alt: "gojo", wide: false },
-    { src: "/sylveon_anya.png", alt: "sylveon_anya", wide: false },
+    { src: "/sylveon_anya.PNG", alt: "sylveon_anya", wide: false },
     { src: "/animusic.png", alt: "animusic", wide: true },
     { src: "/bocchi_the_idol.PNG", alt: "bocchi_the_idol", wide: false }
   ];

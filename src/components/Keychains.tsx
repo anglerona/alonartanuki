@@ -28,6 +28,39 @@ import Umemiya from "../public/keychains/Umemiya.png";
 
 const keychainGroups = [
   {
+    title: "Umamusume",
+    images: [
+      "keychains/tokai_teio.PNG",
+      "keychains/gold_ship.PNG",
+      "keychains/mejiro_mcqueen.PNG",
+      "keychains/kitasan_black.PNG",
+      "keychains/satono_diamond.PNG"
+    ]
+  },
+  {
+    title: "The Fragrant Flower",
+    images: [
+      "keychains/kaoruko.PNG",
+      "keychains/rintaro.PNG"
+    ]
+  },
+  {
+    title: "Chainsaw Man",
+    images: [
+      "keychains/denji.png",
+      "keychains/reze.png"
+    ]
+  },
+  {
+    title: "Demon Slayer",
+    images: [
+      "keychains/kocho.png",
+      "keychains/giyu.png",
+      "keychains/Mitsuri.png",
+      "keychains/Obanai.png"
+    ]
+  },
+  {
     title: "Konosuba",
     images: [
       "keychains/aqua.png",

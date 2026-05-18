@@ -1,6 +1,10 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Ayaka from "../public/stickers/Ayaka.png";
 import Dysfunctional from "../public/stickers/Dysfunctional.png";
@@ -24,23 +28,31 @@ import Yoimiya from "../public/stickers/Yoimiya.png";
 
 const stickerGroups = [
   {
+    title: "Spy x Family Sticker Sheet",
+    images: ["stickers/anya_sticker_sheet.PNG"],
+  },
+  {
+    title: "Umamusume Sticker Sheet",
+    images: ["stickers/uma_sticker_sheet.PNG"],
+  },
+  {
     title: "Genshin Impact Specialty Dishes",
     images: [
-        "stickers/Ayaka.png",
-        "stickers/Furina.png",
-        "stickers/Kokomi.png",
-        "stickers/Lynette.png",
-        "stickers/Lyney.png",
-        "stickers/Layla.png",
-        "stickers/Nahida.png",
-        "stickers/Noelle.png",
-        "stickers/Nilou.png",
-        "stickers/Yoimiya.png",
-        "stickers/Gorou.png",
-        "stickers/Kirara.png",
-        "stickers/Sayu.png",
-        "stickers/Yaemiko.png",
-    ]
+      "stickers/Ayaka.png",
+      "stickers/Furina.png",
+      "stickers/Kokomi.png",
+      "stickers/Lynette.png",
+      "stickers/Lyney.png",
+      "stickers/Layla.png",
+      "stickers/Nahida.png",
+      "stickers/Noelle.png",
+      "stickers/Nilou.png",
+      "stickers/Yoimiya.png",
+      "stickers/Gorou.png",
+      "stickers/Kirara.png",
+      "stickers/Sayu.png",
+      "stickers/Yaemiko.png",
+    ],
   },
   {
     title: "Bocchi the Rock",
@@ -49,9 +61,9 @@ const stickerGroups = [
       "stickers/Dysfunctional.png",
       "stickers/Mango.png",
       "stickers/Glock.png",
-      "stickers/Original.png"
-    ]
-  }
+      "stickers/Original.png",
+    ],
+  },
 ];
 
 const Stickers = () => {
@@ -83,22 +95,36 @@ const Stickers = () => {
       {stickerGroups.map((group) => (
         <div key={group.title} className="mb-8">
           <h3 className="text-lg font-semibold mb-4">{group.title}</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-center">
+          <div
+            className={`grid gap-6 items-center justify-center ${
+              group.images.length === 1
+                ? "grid-cols-1"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            }`}
+          >
             {group.images.map((img, idx) => (
               <div key={img} className="flex flex-col items-center">
-                <div className="relative w-full h-auto">
+                <div
+                  className={`relative h-auto ${
+                    group.images.length === 1 ? "w-full" : "w-full max-w-xs"
+                  }`}
+                >
                   <Image
                     src={`/${img}`}
                     alt={img.replace(/\.[^/.]+$/, "")}
-                    width={220}
-                    height={220}
+                    width={1000}
+                    height={1000}
                     quality={40}
                     className="rounded-lg w-full h-auto shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                     onClick={() => handleImageClick(group.images, idx)}
                     style={{ objectFit: "contain" }}
                     onContextMenu={(e) => e.preventDefault()}
                   />
-                  <div className="absolute inset-0 w-full h-full bg-transparent z-20" style={{ pointerEvents: "none", touchAction: "none" }} onContextMenu={(e) => e.preventDefault()} />
+                  <div
+                    className="absolute inset-0 w-full h-full bg-transparent z-20"
+                    style={{ pointerEvents: "none", touchAction: "none" }}
+                    onContextMenu={(e) => e.preventDefault()}
+                  />
                 </div>
               </div>
             ))}
@@ -106,17 +132,26 @@ const Stickers = () => {
         </div>
       ))}
       {carouselOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" onClick={() => setCarouselOpen(false)}>
-          <div className="absolute inset-0 flex flex-col items-center justify-center" onClick={e => e.stopPropagation()}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={() => setCarouselOpen(false)}
+        >
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Carousel
               opts={{ startIndex: carouselIndex }}
               className="w-full h-full flex items-center justify-center"
-              setApi={api => (carouselApiRef.current = api)}
+              setApi={(api) => (carouselApiRef.current = api)}
             >
               <div className="relative h-screen w-full">
                 <CarouselContent className="h-screen">
                   {carouselImages.map((img) => (
-                    <CarouselItem key={img} className="relative flex flex-col items-center justify-center w-full h-screen">
+                    <CarouselItem
+                      key={img}
+                      className="relative flex flex-col items-center justify-center w-full h-screen"
+                    >
                       <div className="relative w-full h-full">
                         <Image
                           src={`/${img}`}
@@ -127,7 +162,11 @@ const Stickers = () => {
                           style={{ objectFit: "contain" }}
                           onContextMenu={(e) => e.preventDefault()}
                         />
-                        <div className="absolute inset-0 w-full h-full bg-transparent z-20" style={{ pointerEvents: "none", touchAction: "none" }} onContextMenu={(e) => e.preventDefault()} />
+                        <div
+                          className="absolute inset-0 w-full h-full bg-transparent z-20"
+                          style={{ pointerEvents: "none", touchAction: "none" }}
+                          onContextMenu={(e) => e.preventDefault()}
+                        />
                       </div>
                     </CarouselItem>
                   ))}
@@ -138,7 +177,10 @@ const Stickers = () => {
                   type="button"
                   aria-label="Previous"
                 >
-                  <ChevronLeft size={48} className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200" />
+                  <ChevronLeft
+                    size={48}
+                    className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  />
                 </button>
                 <button
                   className="absolute hover:cursor-pointer right-4 top-1/2 -translate-y-1/2 z-50 flex items-center justify-center"
@@ -146,12 +188,22 @@ const Stickers = () => {
                   type="button"
                   aria-label="Next"
                 >
-                  <ChevronRight size={48} className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200" />
+                  <ChevronRight
+                    size={48}
+                    className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200"
+                  />
                 </button>
               </div>
             </Carousel>
-            <button className="absolute hover:cursor-pointer top-8 right-8 text-[#EAD7B7] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12" onClick={() => setCarouselOpen(false)} aria-label="Close">
-                <X size={48} className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200" />
+            <button
+              className="absolute hover:cursor-pointer top-8 right-8 text-[#EAD7B7] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12"
+              onClick={() => setCarouselOpen(false)}
+              aria-label="Close"
+            >
+              <X
+                size={48}
+                className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200"
+              />
             </button>
           </div>
         </div>

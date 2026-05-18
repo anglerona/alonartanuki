@@ -5,12 +5,20 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
-    { src: "/baking.png", alt: "baking", wide: true },
-    { src: "/sleep.png", alt: "sleep", wide: false },
     { src: "/grass_maomao.PNG", alt: "grass_maomao", wide: false },
     { src: "/pokemon_anya.PNG", alt: "pokemon_anya", wide: true },
     { src: "/pokemon_picnic.PNG", alt: "pokemon_picnic", wide: true },
     { src: "/bounsweet.png", alt: "bounsweet", wide: false },
+    { src: "/sylveon_anya.PNG", alt: "sylveon_anya", wide: false },
+    { src: "/animusic.png", alt: "animusic", wide: true },
+    { src: "/baking.png", alt: "baking", wide: true },
+    { src: "/sleep.png", alt: "sleep", wide: false },
+    { src: "/satosugu.PNG", alt: "satosugu", wide: false },
+    { src: "/kafka.PNG", alt: "kafka", wide: false },
+    { src: "/frieren.png", alt: "frieren", wide: false },
+    { src: "/machi.PNG", alt: "machi", wide: false },
+    { src: "/shizuku.PNG", alt: "shizuku", wide: false },
+    { src: "/oshino_shinobu.PNG", alt: "oshino_shinobu", wide: false },
     { src: "/makima.PNG", alt: "makima", wide: false },
     { src: "/hina.png", alt: "hina", wide: false },
     { src: "/saba.png", alt: "saba", wide: false },
@@ -20,8 +28,6 @@ const Illustrations = () => {
     { src: "/piplup.png", alt: "piplup", wide: false },
     { src: "/tsukihi.png", alt: "tsukihi", wide: false },
     { src: "/gojo.png", alt: "gojo", wide: false },
-    { src: "/sylveon_anya.PNG", alt: "sylveon_anya", wide: false },
-    { src: "/animusic.png", alt: "animusic", wide: true },
     { src: "/bocchi_the_idol.PNG", alt: "bocchi_the_idol", wide: false }
   ];
 

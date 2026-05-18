@@ -17,7 +17,7 @@ export default function Home() {
               className="rounded-full border-4 border-[#EAD7B7] shadow-lg mb-6"
               onContextMenu={e => e.preventDefault()}
             />
-      <h1 className="mt-8 font-bold text-3xl">Hi, I'm alonartanuki!</h1>
+      <h1 className="font-bold text-3xl">Hi, I'm alonartanuki!</h1>
       <p>You can view my portfolio and socials with the buttons or see a snapshot of what I've worked on below.</p>
     
         <Link href="/portfolio">
@@ -35,7 +35,7 @@ export default function Home() {
         <Button
           variant="ghost"
           size="lg"
-          onClick={() => window.open("https://instagram.com/alonartanuki", "_blank")}
+          onClick={() => window.open("https://instagram.com/alonatanuki", "_blank")}
           className="flex items-center gap-2"
         >
           <Instagram className="w-5 h-5" />
@@ -53,7 +53,7 @@ export default function Home() {
         <Button
           variant="ghost"
           size="lg"
-          onClick={() => window.open("https://alonartanuki.etsy.com", "_blank")}
+          onClick={() => window.open("https://alonatanuki.etsy.com", "_blank")}
           className="flex items-center gap-2"
         >
           <Store className="w-5 h-5" />

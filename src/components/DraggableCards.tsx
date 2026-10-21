@@ -8,52 +8,46 @@ import Image from "next/image";
 export function DraggableCards() {
   const items = [
     {
-      title: "Bounsweet Gijinka",
-      image: "/bounsweet.png",
+      title: "Animusic fantasy",
+      image: "/animusic_fantasy.png",
       className: "absolute top-10 left-[20%] rotate-[-5deg]",
-      orientation: "vertical"
+      orientation: "horizontal"
     },
     {
-      title: "Bocchi and Ruby",
-      image: "/bocchi_the_idol.PNG",
+      title: "Nessa",
+      image: "/nessa.png",
       className: "absolute top-5 left-[40%] rotate-[8deg]",
       orientation: "vertical"
     },
     {
-      title: "Summer at the beach with wooper",
-      image: "/wooper.PNG",
-      className: "absolute top-32 left-[55%] rotate-[10deg]",
-      orientation: "vertical"
+      title: "Animusic",
+      image: "/animusic.png",
+      className: "absolute top-32 left-[35%] rotate-[10deg]",
+      orientation: "horizontal"
     },
     {
-      title: "Makima",
-      image: "/makima.PNG",
+      title: "Anya hat",
+      image: "/anya_hat.png",
       className: "absolute top-20 right-[35%] rotate-[2deg]",
       orientation: "vertical"
     },
     {
-      title: "Maomao x pokemon",
-      image: "/grass_maomao.PNG",
+      title: "Anya shine",
+      image: "/anya_shine.png",
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
       orientation: "vertical"
     },
     {
-      title: "Sylveon Anya",
-      image: "/sylveon_anya.PNG",
+      title: "Bocchi glasses",
+      image: "/bocchi_glasses.png",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
       orientation: "vertical"
     },
     {
-      title: "Pokemon picnic",
-      image: "/pokemon_picnic.PNG",
+      title: "Bocchi turn",
+      image: "/bocchi_turn.png",
       className: "absolute top-8 left-[30%] rotate-[4deg]",
-      orientation: "horizontal"
-    },
-     {
-      title: "Pokemon Anya",
-      image: "/pokemon_anya.PNG",
-      className: "absolute top-8 left-[30%] rotate-[4deg]",
-      orientation: "horizontal"
+      orientation: "vertical"
     },
   ];
   return (

@@ -8,13 +8,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-center gap-4 md:gap-8 flex px-4 flex-col items-center justify-center bg-[#FDF6EC] text-[#4B2E19] mt-12">
+    <div className="min-h-screen text-center gap-4 md:gap-8 flex px-4 flex-col items-center justify-center bg-[#FFFAF9] text-[#C43D62] mt-12">
             <Image
               src="/profile.png"
               alt="Profile"
               width={180}
               height={180}
-              className="rounded-full border-4 border-[#EAD7B7] shadow-lg mb-6"
+              className="rounded-full border-4 border-[#F9C4D2] shadow-lg mb-6"
               onContextMenu={e => e.preventDefault()}
             />
       <h1 className="font-bold text-3xl">Hi, I'm alonartanuki!</h1>
@@ -44,7 +44,7 @@ export default function Home() {
         <Button
           variant="ghost"
           size="lg"
-          onClick={() => window.open("https://youtube.com/@alonartanuki", "_blank")}
+          onClick={() => window.open("https://youtube.com/@alonatanuki", "_blank")}
           className="flex items-center gap-2"
         >
           <Youtube className="w-5 h-5" />

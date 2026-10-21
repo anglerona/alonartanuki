@@ -10,7 +10,7 @@ import Stickers from "@/components/Stickers";
 
 const PortfolioPage = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-[#FDF6EC] text-[#4B2E19] p-4">
+    <div className="w-full flex flex-col items-center justify-center bg-[#FFFAF9] text-[#C43D62] p-4">
       <h1 className="text-3xl font-bold mb-8">My Portfolio</h1>
       <div className="w-full max-w-4xl flex justify-center items-center">
         <Tabs defaultValue="illustrations">

@@ -5,6 +5,14 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const Illustrations = () => {
   const images = [
+    { src: "/bocchi_turn.png", alt: "bocchi_turn", wide: false },
+    { src: "/bocchi_glasses.png", alt: "bocchi_glasses", wide: false },
+    { src: "/anya_shine.png", alt: "anya_shine", wide: false },
+    { src: "/anya_hat.png", alt: "anya_hat", wide: false },
+    { src: "/marin.png", alt: "marin", wide: false },
+    { src: "/nessa.png", alt: "nessa", wide: false },
+    { src: "/animusic_fantasy.png", alt: "animusic_fantasy", wide: true },
+    { src: "/chrollo.PNG", alt: "chrollo", wide: false },
     { src: "/grass_maomao.PNG", alt: "grass_maomao", wide: false },
     { src: "/pokemon_anya.PNG", alt: "pokemon_anya", wide: true },
     { src: "/pokemon_picnic.PNG", alt: "pokemon_picnic", wide: true },
@@ -52,7 +60,7 @@ const Illustrations = () => {
   };
 
   return (
-    <div className="p-6 rounded-lg text-[#2E1A0A] shadow">
+    <div className="p-6 rounded-lg text-[#9A2C4F] shadow">
       <h2 className="text-xl font-bold mb-4">Illustrations</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
         {images.map((img, idx) => (
@@ -67,7 +75,7 @@ const Illustrations = () => {
                 width={img.wide ? 440 : 220}
                 height={300}
                 quality={40}
-                className="rounded-lg w-full h-auto shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
+                className="rounded-lg w-full h-auto shadow-md border border-[#F9C4D2] bg-[#FFFAF9] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                 onClick={() => handleImageClick(idx)}
                 style={{ objectFit: "contain" }}
                 onContextMenu={(e) => e.preventDefault()}
@@ -124,7 +132,7 @@ const Illustrations = () => {
                 </button>
               </div>
             </Carousel>
-            <button className="absolute hover:cursor-pointer top-8 right-8 text-[#EAD7B7] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12" onClick={() => setCarouselOpen(false)} aria-label="Close">
+            <button className="absolute hover:cursor-pointer top-8 right-8 text-[#F9C4D2] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12" onClick={() => setCarouselOpen(false)} aria-label="Close">
                 <X size={48} className="text-white opacity-80 hover:opacity-100 transition-opacity duration-200" />
             </button>
           </div>

@@ -90,7 +90,7 @@ const Stickers = () => {
   };
 
   return (
-    <div className="p-6 rounded-lg text-[#2E1A0A] shadow">
+    <div className="p-6 rounded-lg text-[#9A2C4F] shadow">
       <h2 className="text-xl font-bold mb-4">Sticker Art</h2>
       {stickerGroups.map((group) => (
         <div key={group.title} className="mb-8">
@@ -115,7 +115,7 @@ const Stickers = () => {
                     width={1000}
                     height={1000}
                     quality={40}
-                    className="rounded-lg w-full h-auto shadow-md border border-[#EAD7B7] bg-[#FDF6EC] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
+                    className="rounded-lg w-full h-auto shadow-md border border-[#F9C4D2] bg-[#FFFAF9] transition-transform duration-200 cursor-pointer hover:-translate-y-2"
                     onClick={() => handleImageClick(group.images, idx)}
                     style={{ objectFit: "contain" }}
                     onContextMenu={(e) => e.preventDefault()}
@@ -196,7 +196,7 @@ const Stickers = () => {
               </div>
             </Carousel>
             <button
-              className="absolute hover:cursor-pointer top-8 right-8 text-[#EAD7B7] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12"
+              className="absolute hover:cursor-pointer top-8 right-8 text-[#F9C4D2] rounded-full shadow hover:text-white z-50 flex items-center justify-center size-12"
               onClick={() => setCarouselOpen(false)}
               aria-label="Close"
             >
